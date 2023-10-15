@@ -1,0 +1,14 @@
+AI,Peaje 2,3
+AA,Hotel Perlas,1
+AF,Peaje 1,3
+AM,Museo de Arte Moderno,2
+AD,Puente angosto 1,3
+AE,Calle rota 1,3
+AL,Museo de Ciencias Naturales,2
+AB,Hotel Las Rocas,1
+AJ,Parque La Costa,2
+AK,Restaurante La Farola,2
+AC,Hotel Gran Sol,1
+AG,Puente angosto 2,3
+AN,Playa Grande,2
+AH,Calle rota 2,3
