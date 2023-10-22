@@ -40,6 +40,8 @@ La distribución actual de los **Lugares** es la siguiente:
 6. Ejectuar el comando `pip install -r requirements.txt`.
 7. Correr el archivo `run.sh` en una terminal Bash.
 
+![image](https://github.com/Isaac-PM/viaja-xpress/assets/88395888/ccc20ddf-2c90-485d-b47e-4aeedc2083f5)
+
 ## Referencias
 
 Lipovača, M. (2011). *Learn You a Haskell for Great Good!*. Recuperado de: http://learnyouahaskell.com/chapters
