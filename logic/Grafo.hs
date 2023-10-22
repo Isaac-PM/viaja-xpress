@@ -3,7 +3,13 @@ module Grafo where
 import Data.List (minimumBy)
 import Data.Maybe (fromJust, isJust)
 import Data.Ord (comparing)
-import Utilidades (splitOn)
+import System.Environment
+
+splitOn :: Char -> String -> [String]
+splitOn _ [] = []
+splitOn c s = [x] ++ splitOn c (drop 1 y)
+  where
+    (x, y) = span (/= c) s
 
 data Nodo = Nodo
   { nombre :: String,
@@ -104,3 +110,17 @@ caminoMasCortoNoVisitado caminos visitados =
 caminoPesoMinimo :: (a -> a -> Ordering) -> [a] -> Maybe a
 caminoPesoMinimo _ [] = Nothing
 caminoPesoMinimo cmp xs = Just (minimumBy cmp xs)
+
+main :: IO ()
+main = do
+  args <- getArgs
+  if length args /= 2
+    then putStrLn "Uso: caminoMasCorto <nodoInicio> <nodoFin>"
+    else do
+      let [salida, llegada] = args
+      grafo <- cargarGrafo "../data/grafo.txt"
+      let camino = caminoMasCorto salida llegada grafo
+      case camino of
+        Nothing -> putStrLn "No existe un camino entre los lugares ingresados."
+        Just camino -> do
+          print (reverse (recorrido camino))
